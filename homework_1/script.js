@@ -98,7 +98,7 @@ let maxLine = medianNumber;
 let space = '';
 let symbol = '';
 
-while (i < maxLine) {
+while (i <= maxLine) {
     space = '';
     symbol = '';
 
@@ -110,4 +110,29 @@ while (i < maxLine) {
     }
     console.log(space + symbol + space);
     i++;
+}
+
+// ---------------------------- TASK 5 (without while)----------------------------
+console.log('');
+
+const medianNumber2 = 10;
+
+let dash = '';
+let pound = '';
+
+for (let i = 1; i <= medianNumber2; i++) {
+
+    for (j = 0; j < medianNumber2 - i; j++) {
+        
+        dash += '-';
+    }
+    for (j = 0; j < 2 * i - 1; j++) {
+        
+        pound += '#';
+    }
+    
+    console.log(dash + pound + dash);
+    pound = '';
+    dash = '';
+
 }
