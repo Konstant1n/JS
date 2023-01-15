@@ -140,7 +140,7 @@ let createEmployesFromArr = (arr) => {                  //Create an arrow functi
     const newEmployeeArr = [];                          //Create an empty array
 
     for (const employee of arr) {                       //Looping through an array element by element
-        const newEmployee = new Employee(employee);     //Assign a new Employee object to the newEmployee variable, in which we put the object from the passed array
+        const newEmployee = new Employee(employee);    //Assign a new Employee object to the newEmployee variable, in which we put the object from the passed array
         newEmployeeArr.push(newEmployee);               //Push the newEmployee variable into the emplyeeConstructArr array
     }
 
