@@ -1,109 +1,5 @@
-const emplyeeArr = [
-    {
-        id: 1,
-        name: 'Денис',
-        surname: 'Хрущ',
-        salary: 1010,
-        workExperience: 10, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'male'
-    },
-    {
-        id: 2,
-        name: 'Сергей',
-        surname: 'Войлов',
-        salary: 1200,
-        workExperience: 12, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'male'
-    },
-    {
-        id: 3,
-        name: 'Татьяна',
-        surname: 'Коваленко',
-        salary: 480,
-        workExperience: 3, /// стаж работы (1 = один месяц)
-        isPrivileges: true, /// льготы
-        gender: 'female'
-    },
-    {
-        id: 4,
-        name: 'Анна',
-        surname: 'Кугир',
-        salary: 2430,
-        workExperience: 20, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'female'
-    },
-    {
-        id: 5,
-        name: 'Татьяна',
-        surname: 'Капустник',
-        salary: 3150,
-        workExperience: 30, /// стаж работы (1 = один месяц)
-        isPrivileges: true, /// льготы
-        gender: 'female'
-    },
-    {
-        id: 6,
-        name: 'Станислав',
-        surname: 'Щелоков',
-        salary: 1730,
-        workExperience: 15, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'male'
-    },
-    {
-        id: 7,
-        name: 'Денис',
-        surname: 'Марченко',
-        salary: 5730,
-        workExperience: 45, /// стаж работы (1 = один месяц)
-        isPrivileges: true, /// льготы
-        gender: 'male'
-    },
-    {
-        id: 8,
-        name: 'Максим',
-        surname: 'Меженский',
-        salary: 4190,
-        workExperience: 39, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'male'
-    },
-    {
-        id: 9,
-        name: 'Антон',
-        surname: 'Завадский',
-        salary: 790,
-        workExperience: 7, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'male'
-    },
-    {
-        id: 10,
-        name: 'Инна',
-        surname: 'Скакунова',
-        salary: 5260,
-        workExperience: 49, /// стаж работы (1 = один месяц)
-        isPrivileges: true, /// льготы
-        gender: 'female'
-    },
-    {
-        id: 11,
-        name: 'Игорь',
-        surname: 'Куштым',
-        salary: 300,
-        workExperience: 1, /// стаж работы (1 = один месяц)
-        isPrivileges: false, /// льготы
-        gender: 'male'
-    },
-];
-
-
 //--------------------------------TASK-1--------------------------------
-// Create a function - a constructor that will have inside all the properties of the emplyee object from the array emplyeeArr;
-
+// Create a constructor function that will have all the properties of the emplyee object from the emplyeeArr array;
 
 // Long but clear solution
 
@@ -115,7 +11,11 @@ const Employee = function (employee) {
     this.workExperience = employee.workExperience;
     this.isPrivileges = employee.isPrivileges;
     this.gender = employee.gender;
+
+
 };
+
+
 
 
 //--------------------------------TASK-2--------------------------------
@@ -148,8 +48,10 @@ let createEmployesFromArr = (arr) => {                  //Create an arrow functi
 
 };
 const emplyeeConstructArr = createEmployesFromArr(emplyeeArr); //Create a new array based on emplyeeArr
-// console.log('--------------------------------TASK-3--------------------------------');
-// console.log(emplyeeConstructArr);
+
+// console.log('--------------------------------TASK-3 - end--------------------------------');
+
+
 
 
 //--------------------------------TASK-4--------------------------------
@@ -168,26 +70,29 @@ const getFullNamesFromArr = (arr) => {                  //Create an arrow functi
 
 };
 
-// console.log('--------------------------------TASK-4--------------------------------');
-// console.log(getFullNamesFromArr(emplyeeConstructArr));
+console.log('--------------------------------TASK-4--------------------------------');
+console.log(getFullNamesFromArr(emplyeeConstructArr));
 
 
 
 //--------------------------------TASK-5--------------------------------
+//Create a function that returns the average salary of all employees
+
 const getMiddleSalary = (arr) => {
 
     let sumOfSalary = 0;
 
-    for (const employee of arr) {           //Looping through an array element by element
-        sumOfSalary += employee.salary;     //Push getFullName created in task-2 to a new array     
+    for (const employee of arr) {
+        sumOfSalary += employee.salary;     //Collecting the sum of all salaries    
     }
 
-    let MiddleSalary = sumOfSalary / arr.length; //Calculate the average salary of all employees
+    let MiddleSalary = sumOfSalary / arr.length; //Divide the amount by the number of employees
     return Math.round(MiddleSalary); //Return rounded value
 };
 
 // getMiddleSalary(emplyeeConstructArr); 
-// console.log(getMiddleSalary(emplyeeConstructArr));
+console.log('--------------------------------TASK-5--------------------------------');
+console.log(getMiddleSalary(emplyeeConstructArr));
 
 
 //--------------------------------TASK-6--------------------------------
@@ -205,8 +110,8 @@ const getRandomEmployee = (arr) => {
 }
 
 
-//--------------------------------TASK-6--------------------------------
-// console.log (getRandomEmployee(emplyeeConstructArr));
+console.log('--------------------------------TASK-6--------------------------------');
+console.log(getRandomEmployee(emplyeeConstructArr));
 
 
 
@@ -215,26 +120,37 @@ const getRandomEmployee = (arr) => {
 // passed to it in the instance from which it is called. And give out all properties, 
 // if you refer to it, as a string <Property name> - <value> separated by commas.
 
+
+console.log('--------------------------------TASK-7--------------------------------');
+
+
 const employeeObj = new Employee(emplyeeArr[0]);
 
-console.log(employeeObj);
 
 Object.defineProperty(employeeObj, 'fullInfo', {
-    get: function () {
-        return `id - ${this.id}, name - ${this.name}, surname - ${this.surname}, salary - ${this.salary}, workExperience - ${this.workExperience}, isPrivileges - ${this.isPrivileges}, gender - ${this.gender}`
-    },
-
-    set: function (property) {
-        for (let key in property) {
-            if (this.hasOwnProperty(key)) {
-                this[key] = property[key];
+    get() {
+        for (const key in employeeObj) {
+            if (typeof employeeObj[key] !== 'function') { // вирішення проблеми, якщо key це функція, скоріше за все це трохи костильно, але дозволяє виконати задачу.
             }
         }
+        return employeeObj; // не розумію чому всі намагалися тут вивести масив, в задачі ж видно, що повертатися має об’єкт.
     },
-})
 
-console.log(employeeObj.fullInfo);
-
-employeeObj.fullInfo = { name: 'Вася', salary: 9000, email: 'ex@mail.ua' };
+    set(properties) {
+        for (const property in properties) {
+            if (this.hasOwnProperty(property)) { // Якщо властивості в об'єкті, що передається, не було оголошено в класі, то цю властивість не записуємо в екземпляр
+                this[property] = properties[property];
+            }
+        }
+    }
+}
+);
 
 console.log(employeeObj);
+// Employee {id: 1, name: 'Денис', surname: 'Хрущ', salary: 1010, workExperience: 10, …}
+
+employeeObj.fullInfo = { name: "Вася", salary: 9000, email: "ex@mail.ua" };
+
+console.log(employeeObj.fullInfo);
+//Employee {id: 1, name: 'Вася', surname: 'Хрущ', salary: 9000, workExperience: 10, …}
+
