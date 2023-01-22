@@ -88,7 +88,7 @@ function getLastTime() {
 const getTime = getLastTime();
 
 // Первый раз делал через setInterval, подсмотрел еще такое решение, решил для разнообразия так сделать.
-
+console.log("---------------------------------Task - 3---------------------------------");
 // Запускаем первый раз в консоли.
 // (getTime());
 // enabled
@@ -118,7 +118,7 @@ function timeCounter(timeInSeconds) {
         let strMin = null;
         let strSec = null;
 
-        if (minutes.toString().length < 2) {        // Если минут меньше 9
+        if (minutes.toString().length < 2) {        // Если минут меньше 10, точнее меньше 2 цифр в количестве минут.
              strMin = "0" + minutes;                // Прибавляєм 0 в начале, чтобы соблюдать формат вывода 00:00
         } else {
             strMin = minutes;
@@ -138,5 +138,5 @@ function timeCounter(timeInSeconds) {
     }, 1000)
 }
 
-
+console.log("---------------------------------Task - 4---------------------------------");
 timeCounter(700);
